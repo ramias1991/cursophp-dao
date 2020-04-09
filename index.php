@@ -22,16 +22,23 @@ echo json_encode($lista);
 $lista = Usuario::search("l");
 echo json_encode($lista);
 */
-/*
+
+/* Carrega um usuario usando login e senha
 $usuario = new Usuario();
 $usuario->login("ramiassouza", "!@#$%");
 echo $usuario;
 */
 
-$aluno = new Usuario();
-
-$aluno->setDeslogin("Ester");
-$aluno->setDessenha("asdf");
+/* Criando um novo usuário
+$aluno = new Usuario("Pietro", "159753");
+//$aluno->setDeslogin("Ester");
+//$aluno->setDessenha("asdf");
 $aluno->insert();
 echo $aluno;
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(5);
+$usuario->update("Isadora", "asd321");
+echo $usuario;
 ?>
