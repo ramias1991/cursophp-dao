@@ -22,8 +22,16 @@ echo json_encode($lista);
 $lista = Usuario::search("l");
 echo json_encode($lista);
 */
-
+/*
 $usuario = new Usuario();
 $usuario->login("ramiassouza", "!@#$%");
 echo $usuario;
+*/
+
+$aluno = new Usuario();
+
+$aluno->setDeslogin("Ester");
+$aluno->setDessenha("asdf");
+$aluno->insert();
+echo $aluno;
 ?>
